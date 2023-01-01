@@ -98,3 +98,8 @@ advisories:
     - timestamp: 2022-12-30T20:07:36.499466-05:00
       status: fixed
       fixed-version: 2.39.0-r1
+  CVE-2023-0001:
+    - timestamp: 2023-01-01T12:30:49.400763-05:00
+      status: under_investigation
+    - timestamp: 2023-01-01T12:31:23.354884-05:00
+      status: affected
