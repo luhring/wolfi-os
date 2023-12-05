@@ -1,0 +1,39 @@
+package:
+  name: management-api-for-apache-cassandra-0.1
+  version: 0.1.71
+  epoch: 0
+  description: RESTful / Secure Management Sidecar for Apache Cassandra
+  copyright:
+    - license: Apache-2.0
+  dependencies:
+    runtime:
+      - openjdk-17-jre
+      - openjdk-17-default-jvm
+
+environment:
+  contents:
+    packages:
+      - busybox
+      - ca-certificates-bundle
+      - maven
+      - openjdk-17
+      - openjdk-17-default-jvm
+
+pipeline:
+  - uses: git-checkout
+    with:
+      repository: https://github.com/k8ssandra/management-api-for-apache-cassandra
+      expected-commit: 9795d838e7c965c50a0a6a0d687c93db70344255
+      tag: v${{package.version}}
+
+  - runs: |
+      export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+
+      mvn -q -ff package -DskipTests -DskipOpenApi
+
+update:
+  enabled: true
+  github:
+    identifier: k8ssandra/management-api-for-apache-cassandra
+    tag-filter: Release v0.1
+    strip-prefix: Release v
