@@ -1,8 +1,7 @@
 issuer: https://accounts.google.com
 
-# staging-images: not in use
-# prod-images: lifecycle-eol-mover@prod-images-c6e5.iam.gserviceaccount.com
-subject: "105314035764875766195"
+# dluhring: lifecycle-eol-mover@dluhring-chainguard.iam.gserviceaccount.com
+subject: "100808317335841680653"
 
 permissions:
   contents: write
