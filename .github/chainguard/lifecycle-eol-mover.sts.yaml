@@ -6,4 +6,3 @@ subject: "100808317335841680653"
 permissions:
   contents: write
   pull_requests: write
-  workflows: write
