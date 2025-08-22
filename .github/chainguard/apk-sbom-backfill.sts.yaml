@@ -1,0 +1,7 @@
+issuer: https://accounts.google.com
+
+# luhring2-chainguard: apk-sbom-backfill@luhring2-chainguard-dev.iam.gserviceaccount.com
+subject_pattern: "115260973363002175064"
+
+permissions:
+  contents: read
